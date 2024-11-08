@@ -1,0 +1,26 @@
+﻿using LogViewer.Enums;
+using System.Collections.Generic;
+
+namespace LogViewer.MVVM.Models
+{
+    /// <summary>
+    /// Хранит в себе конфигурацию шаблона лога, через которую будет импортироваться лог
+    /// </summary>
+    public class LogTemplate
+    {
+        /// <summary>
+        /// Элементы шаблона и их индекс в сообщении
+        /// </summary>
+        public Dictionary<eImportTemplateParameters, int> TemplateParameterses { get; } = new Dictionary<eImportTemplateParameters, int>();
+
+        /// <summary>
+        /// Разделитель
+        /// </summary>
+        public string Separator { get; set; } = ";";
+
+        /// <summary>
+        /// Кодировка
+        /// </summary>
+        public string Encoding { get; set; } = "UTF-8";
+    }
+}
